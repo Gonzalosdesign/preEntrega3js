@@ -18,7 +18,7 @@
     </nav>
     <main>
         <h1>Welcome to your own money manager app</h1>
-        <form>
+        <form id="movementCreationForm">
             <input type="text" id="description" placeholder="Rent">
                 <label for="description">Description</label><br>
             <input type="number" id="movementImport" placeholder="666">
@@ -27,10 +27,11 @@
                 <label for="credit">Credit</label><br>
             <input type="radio" id="debit" name="movementType" value="debit">
                 <label for="debit">Debit</label><br>
-            <button type="button" id="send">Send</button>
+            <button type="submit" id="send" >Send</button>
         </form>
     </main>
     <footer>developed by Gonzalo Souto</footer>
+    <script src="./js/movementsClass.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

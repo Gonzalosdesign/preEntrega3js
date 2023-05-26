@@ -11,6 +11,11 @@ header {
     font-weight:bolder;
 }
 
+form {
+    background-color: #172621;
+    padding: 4%;
+}
+
 footer {
     background-color:#172621;
     width: 100%;
