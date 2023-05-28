@@ -1,35 +1,13 @@
 body {
-    background-color: #333;
+    font-family: 'Staatliches', cursive;
+    font-size: larger;
+    background-color: #260101;
     color: white;
     padding: 1%;
 }
 
 .credit, .search {
-    background-color: grey;
-    border: 3px solid darkgreen;
-    border-radius: 10px;
+    background-color: #275950;
+    border: white solid 4px;
     padding: 1%;
-}
-
-.credit{
-    border-color: green;
-}
-
-.search {
-    border-color: blue;
-    font-size: medium;
-}
-
-h2, h5, h6 {
-    font-size: small;
-}
-
-.display {
-    border: 2px solid green;
-    min-height: 100px;
-}
-
-.found {
-    border: 2px solid blue;
-    min-height: 100px;
 }

@@ -1,7 +1,7 @@
 
     let reset = document.getElementById("reset");
         reset.addEventListener("click", (e) => {
-            alert("delete");
+        alert("accaount deleted");
         //Prevent page reload
         e.preventDefault();
         //Clean storage
