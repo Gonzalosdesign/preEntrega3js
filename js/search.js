@@ -1,3 +1,5 @@
+//filter credits within the totalMovements array based on user defined values
+
 let formSearch = document.getElementById("formSearch");
         formSearch.addEventListener("submit", (e) => {
             // prevent page reload
@@ -5,29 +7,32 @@ let formSearch = document.getElementById("formSearch");
             
             // select and clean the display area
             let found = document.getElementById("found");
-            // found.innerHTML = "";
+            found.innerHTML = "";
             
             // get user values
             let inputs = e.target.children;
-            let minFilter = inputs[0].value;
-            let maxFilter = inputs[1].value;
-            console.log(`min: ${minFilter}`);
-            console.log(`max: ${maxFilter}`);
+            let minFilter = parseFloat(inputs[0].value);
+            let maxFilter = parseInt(inputs[1].value);
 
-            // filter objects within the user range
-            const filtered = totalMovements.filter((movement) => movement.amount >= minFilter && movement.amount <= maxFilter);
-            // print a div for each movement between user defined values
-            for ( const movement of filtered) {
-                // console.log(`Movement amount: ${movement.amount}, description: ${movement.description}, id: ${movement.id}, date: ${movement.date}`);
+            //if min > max alert user
+            minFilter > maxFilter ? alert(`Min must be < than Max`) : displayFiltered();
 
-                let div = document.createElement("div");
-                div.className = `search`;
-                div.innerHTML = `
-                <h2>amount: ${movement.amount}</h2>
-                <h5>description: ${movement.description}</h5>
-                <p>id: ${movement.id}</p>
-                <h6>date: ${movement.date}</h6>
-                `;
-                found.append(div);
-            };
+            function displayFiltered () {
+                // filter objects within the user range
+                const filtered = totalMovements.filter((movement) => movement.amount >= minFilter && movement.amount <= maxFilter);
+    
+                // print a div for each movement between user defined values
+                for ( const movement of filtered) {
+                    let div = document.createElement("div");
+                    div.className = `search`;
+                    div.innerHTML = `
+                    <h2>amount: ${movement.amount}</h2>
+                    <h5>description: ${movement.description}</h5>
+                    <p>id: ${movement.id}</p>
+                    <h6>date: ${movement.date}</h6>
+                    `;
+                    found.append(div);
+                };
+            }
+
         });

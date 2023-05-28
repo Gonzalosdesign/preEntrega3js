@@ -1,3 +1,4 @@
+//display every credit into the page
 function displayPrint() {
     let display = document.getElementById("display");
     display.innerHTML = "";
