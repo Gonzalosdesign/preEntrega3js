@@ -6,6 +6,10 @@ body {
     padding: 1%;
 }
 
+h1 {
+    color: #9BF2EA;
+}
+
 .credit, .search {
     background-color: #275950;
     border: white solid 4px;
