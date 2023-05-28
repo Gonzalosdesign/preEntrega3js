@@ -1,5 +1,8 @@
 //every credit is pushed into this array
 let totalMovements = [];
+// let userStorage = localStorage.getItem("totalMovements");
+// totalMovements = JSON.parse(userStorage);
+
 let cash = 0;
 
 //showing total cash function
@@ -28,15 +31,17 @@ let formCredits = document.getElementById("formCredits");
     //creates a new object based on user values and predefined class
     let credit = new Credits (inputs[0].value, inputs[1].value, totalMovements.length + 1, new Date());
     alert(`You have succesfully added a new credit!`);
-    //pushes the credit object into the array
-    totalMovements.push(credit);
+
     //add the credit to total cash
     cash = cash + parseFloat(credit.amount);
+
+    //pushes the credit object into the array AND INTO THE LOCAL STORAGE
+    totalMovements.push(credit);
+    localStorage.setItem("totalMovements", JSON.stringify(totalMovements));
+
     //call functions
     showCash();
     displayPrint();
-
-    //SHOULD PUSH CREDITS INTO LOCAL STORAGE
 
     //SHOULD CALL DISPLAY getting data from storage
 });

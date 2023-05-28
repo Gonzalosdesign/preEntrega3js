@@ -26,7 +26,7 @@ let formSearch = document.getElementById("formSearch");
                     let div = document.createElement("div");
                     div.className = `search`;
                     div.innerHTML = `
-                    <h5>There aren´t any credits within defined range</h5>
+                    <h5>There arent any credits within defined range</h5>
                     `;
                     found.append(div);
                 }
