@@ -1,15 +1,16 @@
-//every credit is pushed into this array
+//satrter values
 let totalMovements = [];
-// let userStorage = localStorage.getItem("totalMovements");
-// totalMovements = JSON.parse(userStorage);
-
 let cash = 0;
 
-//showing total cash function
-function showCash() {
-    let cashDisplay = document.getElementById("cash");
-    cashDisplay.innerHTML = `<p>Your current cash is: ${cash}</p>`;
-};
+// //showing total cash function
+// function showCash() {
+//     //load previous data
+//     let userCash = localStorage.getItem("cash");
+//     cash = JSON.parse(userCash);
+//     //display the current cash
+//     let cashDisplay = document.getElementById("cash");
+//     cashDisplay.innerHTML = `<p>Your current cash is: ${cash}</p>`;
+// };
 
 // predefined object class
 class Credits {
@@ -24,7 +25,8 @@ class Credits {
 //main function, starts with submit event
 let formCredits = document.getElementById("formCredits");
     formCredits.addEventListener("submit", (e) => {
-    //Prevent page reload
+    
+        //Prevent page reload
     e.preventDefault();
     //get user defined values
     let inputs = e.target.children;
@@ -34,6 +36,7 @@ let formCredits = document.getElementById("formCredits");
 
     //add the credit to total cash
     cash = cash + parseFloat(credit.amount);
+    localStorage.setItem("cash", JSON.stringify(cash));
 
     //pushes the credit object into the array AND INTO THE LOCAL STORAGE
     totalMovements.push(credit);
@@ -43,3 +46,7 @@ let formCredits = document.getElementById("formCredits");
     showCash();
     displayPrint();
 });
+
+//call functions
+// showCash();
+// displayPrint();
