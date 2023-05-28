@@ -42,6 +42,4 @@ let formCredits = document.getElementById("formCredits");
     //call functions
     showCash();
     displayPrint();
-
-    //SHOULD CALL DISPLAY getting data from storage
 });

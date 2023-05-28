@@ -1,5 +1,4 @@
 //filter credits within the totalMovements array based on user defined values
-
 let formSearch = document.getElementById("formSearch");
         formSearch.addEventListener("submit", (e) => {
             // prevent page reload
@@ -18,6 +17,8 @@ let formSearch = document.getElementById("formSearch");
             minFilter > maxFilter ? alert(`Min must be < than Max`) : displayFiltered();
 
             function displayFiltered () {
+                let userStorage = localStorage.getItem("totalMovements");
+                totalMovements = JSON.parse(userStorage);
                 // filter objects within the user range
                 const filtered = totalMovements.filter((movement) => movement.amount >= minFilter && movement.amount <= maxFilter);
 

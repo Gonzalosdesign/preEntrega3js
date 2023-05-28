@@ -3,11 +3,9 @@ function displayPrint() {
     let userStorage = localStorage.getItem("totalMovements");
     totalMovements = JSON.parse(userStorage);
     
-    
     let display = document.getElementById("display");
     display.innerHTML = "";
     
-
     for ( const movement of totalMovements) {
         console.log(`amount: ${movement.amount}, description: ${movement.description}, date: ${movement.date}`);
         
@@ -22,3 +20,4 @@ function displayPrint() {
         display.append(div);
     };
 }
+displayPrint();
