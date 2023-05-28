@@ -35,4 +35,8 @@ let formCredits = document.getElementById("formCredits");
     //call functions
     showCash();
     displayPrint();
+
+    //SHOULD PUSH CREDITS INTO LOCAL STORAGE
+
+    //SHOULD CALL DISPLAY getting data from storage
 });
