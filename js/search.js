@@ -25,7 +25,7 @@ let formSearch = document.getElementById("formSearch");
                 //if filtered is empty
                 if (filtered.length === 0 ){
                     let div = document.createElement("div");
-                    div.className = `search`;
+                    div.className = `display`;
                     div.innerHTML = `
                     <h5>There arent any credits within defined range</h5>
                     `;
@@ -35,7 +35,7 @@ let formSearch = document.getElementById("formSearch");
                 // print a div for each movement between user defined values
                 for ( const movement of filtered) {
                     let div = document.createElement("div");
-                    div.className = `search`;
+                    div.className = `display`;
                     div.innerHTML = `
                     <h2>amount: ${movement.amount}</h2>
                     <h5>description: ${movement.description}</h5>
