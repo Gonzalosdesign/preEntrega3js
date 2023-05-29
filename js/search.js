@@ -35,7 +35,7 @@ let formSearch = document.getElementById("formSearch");
                 // print a div for each movement between user defined values
                 for ( const movement of filtered) {
                     let div = document.createElement("div");
-                    div.className = `display`;
+                    div.className = `displaySearch`;
                     div.innerHTML = `
                     <h2>amount: ${movement.amount}</h2>
                     <h5>description: ${movement.description}</h5>

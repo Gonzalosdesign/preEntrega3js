@@ -10,7 +10,7 @@ function displayPrint() {
         console.log(`amount: ${movement.amount}, description: ${movement.description}, date: ${movement.date}`);
         
         let div = document.createElement("div");
-        div.className = `display`;
+        div.className = `displayCredit`;
         div.innerHTML = `
         <h2>amount: ${movement.amount}</h2>
         <p>id: ${movement.id}</p>

@@ -10,15 +10,26 @@ h1 {
     color: #9BF2EA;
 }
 
-.credit, .search {
+.credit {
     background-color: #275950;
     border: white solid 4px;
     padding: 1%;
 }
 
-.display {
+.search {
+    background-color: #272759;
+    border: white solid 4px;
+    padding: 1%;
+}
+
+.displaySearch {
     margin: 2%;
-    border: #275950 2px solid;
-    background-color: #160101;
+    background-color: #272759;
+    padding: 2%;
+}
+
+.displayCredit {
+    margin: 2%;
+    background-color: #275950;
     padding: 2%;
 }
