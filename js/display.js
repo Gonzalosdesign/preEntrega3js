@@ -14,7 +14,7 @@ function displayPrint() {
         div.innerHTML = `
         <h2>amount: ${movement.amount}</h2>
         <p>id: ${movement.id}</p>
-        <h5>description: description: ${movement.description}</h5>
+        <h5>description: ${movement.description}</h5>
         <h6>date: ${movement.date}</h6>
         `;
         display.append(div);
